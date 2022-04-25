@@ -1,89 +1,32 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tugas_3/page_detail_countries.dart';
 
-void main(){
-  runApp(myApp());
+void main() {
+  runApp(const MyApp());
 }
 
-class myApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login Page',
-      home: LoginPage(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with "flutter run". You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // "hot reload" (press "r" in the console where you ran "flutter run",
+        // or simply save your changes to "hot reload" in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+      ),
+      home: PageDetailCountries(),
     );
   }
 }
 
-class LoginPage extends StatefulWidget {
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login Screen'),
-      ),
-      body:  SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 18.0),
-          children: <Widget>[
-            Column(
-                children: <Widget>[
-                  SizedBox(height: 200,),
-                  FlutterLogo(),
-                ]
-            ),
-            SizedBox(height: 70.0,),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                filled: true,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-              ),
-            ),
-            SizedBox(height: 20.0,),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password',
-                filled: true,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-              ),
-            ),
-            SizedBox(height: 20.0,),
-            Column(
-              children: <Widget>[
-                ButtonTheme(
-                  height: 50,
-                  child: ElevatedButton(
-                    //disabledElevation: 2.0,
-                    onPressed: null,
-                    child: Text('Log In',style:TextStyle(color: Colors.white)),
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.blueAccent,
-                        padding: EdgeInsets.symmetric(horizontal: 200, vertical: 20),
-                        textStyle: TextStyle(
-                          fontSize: 20,
-
-                        )),
-                  ),
-                ),
-                SizedBox(height: 20.0,),
-                Text('Forgot Password?'),
-
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}

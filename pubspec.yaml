@@ -1,5 +1,5 @@
-name: tugas1_123190158
-description: main
+name: tugas_3
+description: tugas 3
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.13.4
 
 
   # The following adds the Cupertino Icons font to your application.

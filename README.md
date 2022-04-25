@@ -1,6 +1,6 @@
-# tugas1_123190158
+# tugas_3
 
-main
+tugas 3
 
 ## Getting Started
 
